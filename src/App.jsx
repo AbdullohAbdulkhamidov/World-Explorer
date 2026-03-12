@@ -50,8 +50,8 @@ function App() {
   }
 
   const removeFromFavourites = (country) => {
-    setFavourite(prev =>
-      prev.filter(
+    setFavourite(prevItems =>
+      prevItems.filter(
         item => item?.name?.common !== country?.name?.common
       )
     )
