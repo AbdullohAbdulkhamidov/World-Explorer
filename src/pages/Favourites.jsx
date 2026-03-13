@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import FavouriteCard from '../components/FavouriteCard'
 
 const Favourites = ({ favourite, removeFromFavourites }) => {
 
@@ -8,22 +9,9 @@ const Favourites = ({ favourite, removeFromFavourites }) => {
             <h1 className="title">Your Favourite Countries</h1>
 
             <ul className="countries-box">
-
-                {favourite.map(c => (
-
-                    <li className="card" key={c?.name?.common}>
-
-                        <img src={c?.flags?.png} alt={c?.name?.common} />
-                        <h2 className="card-title"> {c?.name?.official} </h2>
-
-                        <p>📍 {c?.capital?.[0] || "Unknown"}</p>
-                        <Link to={`/name/${c?.name?.common}`}><button>View More</button></Link>
-
-                        <button className="remove-btn" onClick={() => removeFromFavourites(c)} >Remove </button>
-                    </li>
-
-                ))}
-
+                {
+                    favourite.map(c => <FavouriteCard country={c} removeFromFavourites={removeFromFavourites} />)
+                }
             </ul>
 
             <center>
