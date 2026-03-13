@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import FavouriteCard from '../components/FavouriteCard'
+import FavouriteCard from '../components/favourite-card/FavouriteCard'
 
 const Favourites = ({ favourite, removeFromFavourites }) => {
 
@@ -10,7 +10,7 @@ const Favourites = ({ favourite, removeFromFavourites }) => {
 
             <ul className="countries-box">
                 {
-                    favourite.map(c => <FavouriteCard country={c} removeFromFavourites={removeFromFavourites} />)
+                    favourite.map(c => <FavouriteCard key={c.name.common} country={c} removeFromFavourites={removeFromFavourites} />)
                 }
             </ul>
 

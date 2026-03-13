@@ -1,6 +1,6 @@
 import { useState } from "react"
-import SearchBar from "../components/SearchBar"
-import CountryCard from "../components/CountryCard"
+import SearchBar from "../components/search-bar/SearchBar"
+import CountryCard from "../components/country-card/CountryCard"
 
 const Countries = ({ countries }) => {
 
@@ -14,24 +14,11 @@ const Countries = ({ countries }) => {
         <div className="container">
             <h1 className="title">All Countries</h1>
 
-            {/* <div className="filterbox">
-                <input type="text" placeholder="Search..." value={search} onChange={e => setSearch(e.target.value)} />
-
-                <select value={region} onChange={e => setRegion(e.target.value)} >
-                    <option value="All">All</option>
-                    <option value="Asia">Asia</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Africa">Africa</option>
-                    <option value="Americas">Americas</option>
-                    <option value="Oceania">Oceania</option>
-                </select>
-            </div> */}
-
             <SearchBar search={search} region={region} setSearch={setSearch} setRegion={setRegion} />
 
             <ul className="countries-box">
                 {
-                    filtered.map(c => <CountryCard country={c} />)
+                    filtered.length > 0 ? filtered.map(c => <CountryCard  key={c.name.common} country={c} />) : <p>Country not found</p>
                 }
             </ul>
         </div>

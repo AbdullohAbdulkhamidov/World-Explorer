@@ -1,0 +1,36 @@
+/* Navbar.jsx */
+.navbar {
+  margin: 0;
+  padding: 0;
+  background-color: dodgerblue;
+
+  /* position: absolute; */
+  /* left: 0; */
+  width: 100%;
+  max-width: 100vw;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-ul li {
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+}
+
+.nav-ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-ul li a:hover {
+    color: red;
+}

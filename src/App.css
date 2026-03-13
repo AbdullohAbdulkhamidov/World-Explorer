@@ -12,6 +12,9 @@ body {
 }
 
 .title {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  margin: 0;
   text-align: center;
 }
 
@@ -23,6 +26,7 @@ h2 {
 button {
   width: 100%;
   padding: 0.5rem 0;
+  margin: 1rem 0;
   color: #fff;
   background-color: dodgerblue;
   font-weight: 600;
@@ -36,99 +40,96 @@ button:hover {
 }
 
 
-/* Navbar.jsx */
-.navbar {
-  margin: 0;
-  padding: 0;
-  background-color: dodgerblue;
-  width: 100vw;
+
+
+
+
+
+/* ===== REGIONS ===== */
+
+.regions {
+  margin-bottom: 50px;
 }
 
-.nav-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.regions h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.regions ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  max-width: 500px;
+  margin: auto;
 }
 
-.nav-ul li {
-  color: #fff;
-  padding: 1rem 1.2rem;
-  font-size: 1.2rem;
-}
-
-.nav-ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-
-/* Countries */
-.countries-box {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.countries-box .card {
-  width: 160px;
-  min-width: 160px;
-  margin: 10px;
-  padding: 0.5rem;
-  border: 1px solid #cecece;
-  border-radius: 0.5rem;
-  list-style: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.countries-box .card img {
-  width: 100%;
-  height: 100px;
-  border-radius: 0.5rem;
-}
-
-h2.card-title {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.filterbox {
-  display: flex;
-  gap: 16px;
-  margin: 25px 0 30px;
-  width: 100%;
-}
-
-.filterbox input,
-.filterbox select {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid #d6dce3;
-  outline: none;
+.regions li {
   background: white;
-  transition: all .25s ease;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 6px solid yellowgreen;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  font-weight: 500;
 }
 
-.filterbox select {
-  width: 60%;
+/* ===== FEATURED COUNTRY ===== */
+
+.featured-country {
+  background: linear-gradient(135deg, dodgerblue, #3c8be5);
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 50px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
 }
 
-.filterbox input::placeholder {
-  color: #9aa6b2;
+.featured-country h2 {
+  margin-bottom: 15px;
 }
 
-.filterbox input:hover,
-.filterbox select:hover {
-  border-color: #4da3ff;
+.featured-country h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
+
+.featured-country p {
+  margin: 4px 0;
+}
+
+/* ===== QUICK LINKS ===== */
+
+.quick-links {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.quick-links h2 {
+  margin-bottom: 20px;
+}
+
+.quick-links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 26px;
+  background: dodgerblue;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.quick-links a:hover {
+  background: coral;
+}
+
+
+
+
+
+
 
 
 /* Country Details */
@@ -191,10 +192,4 @@ h2.card-title {
   font-size: 16px;
   font-weight: 500;
   color: #333;
-}
-
-
-/* Favourites */
-.remove-btn {
-  margin-top: 0.5rem;
 }

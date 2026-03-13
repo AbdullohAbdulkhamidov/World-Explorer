@@ -1,0 +1,31 @@
+/* SearchBar.jsx */
+.filterbox {
+  display: flex;
+  gap: 16px;
+  margin: 25px 0 30px;
+  width: 100%;
+}
+
+.filterbox input,
+.filterbox select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d6dce3;
+  outline: none;
+  background: white;
+  transition: all .25s ease;
+}
+
+.filterbox select {
+  width: 60%;
+}
+
+.filterbox input::placeholder {
+  color: #9aa6b2;
+}
+
+.filterbox input:hover,
+.filterbox select:hover {
+  border-color: #4da3ff;
+}

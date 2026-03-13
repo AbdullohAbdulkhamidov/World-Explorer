@@ -1,0 +1,30 @@
+/* Home.jsx */
+/* Stats section */
+#world-stats {
+  margin: 2rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  border-left: 6px solid dodgerblue;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  color: coral;
+  margin-bottom: 6px;
+}
+
+.stat-card p {
+  color: #444;
+}

@@ -1,3 +1,4 @@
+import './FavouriteCard.css'
 import { Link } from "react-router-dom"
 
 const FavouriteCard = ({ country, removeFromFavourites }) => {

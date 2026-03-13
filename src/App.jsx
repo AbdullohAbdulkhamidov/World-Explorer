@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Countries from './pages/Countries'
 import CountryDetails from './pages/CountryDetails'
 import Favourites from './pages/Favourites'
-import NotFound from './components/NotFound'
+import Navbar from './components/navbar/Navbar'
+import Footer from './components/footer/Footer'
+
+import NotFound from './components/not-found/NotFound'
 
 function App() {
 
@@ -62,13 +64,14 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home countries={countries} />} />
         <Route path='/countries' element={<Countries countries={countries} />} />
         <Route path="/name/:name" element={<CountryDetails addToFavourites={addToFavourites} favourite={favourite} />} />
         <Route path='/favourites' element={<Favourites favourite={favourite} removeFromFavourites={removeFromFavourites} />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
 
+      <Footer />
     </BrowserRouter>
   )
 }
