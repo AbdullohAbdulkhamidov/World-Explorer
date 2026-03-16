@@ -40,66 +40,7 @@ button:hover {
 }
 
 
-
-
-
-
-
-/* ===== REGIONS ===== */
-
-.regions {
-  margin-bottom: 50px;
-}
-
-.regions h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.regions ul {
-  list-style: none;
-  padding: 0;
-  max-width: 500px;
-  margin: auto;
-}
-
-.regions li {
-  background: white;
-  padding: 14px 18px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  border-left: 6px solid yellowgreen;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-  font-weight: 500;
-}
-
-/* ===== FEATURED COUNTRY ===== */
-
-.featured-country {
-  background: linear-gradient(135deg, dodgerblue, #3c8be5);
-  color: white;
-  padding: 40px;
-  border-radius: 12px;
-  text-align: center;
-  margin-bottom: 50px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-}
-
-.featured-country h2 {
-  margin-bottom: 15px;
-}
-
-.featured-country h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.featured-country p {
-  margin: 4px 0;
-}
-
 /* ===== QUICK LINKS ===== */
-
 .quick-links {
   text-align: center;
   margin-bottom: 50px;

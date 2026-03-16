@@ -1,0 +1,26 @@
+/* Regions.jsx */
+#regions {
+  margin-bottom: 50px;
+}
+
+#regions h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#regions ul {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: auto;
+}
+
+#regions li {
+  background: white;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 6px solid yellowgreen;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  font-weight: 500;
+}

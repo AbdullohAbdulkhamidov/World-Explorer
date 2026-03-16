@@ -21,19 +21,19 @@ const Stats = ({ countries }) => {
 
                     <h2 className="title">World Population</h2>
 
-                    <div class="stats-grid">
+                    <div className="stats-grid">
 
-                        <div class="stat-card">
+                        <div className="stat-card">
                             <h3>{counter}</h3>
                             <p>Total Countries</p>
                         </div>
 
-                        <div class="stat-card">
+                        <div className="stat-card">
                             <h3>{(population / 1000000000).toFixed(2)} billion</h3>
                             <p>World Population</p>
                         </div>
 
-                        <div class="stat-card">
+                        <div className="stat-card">
                             <h3>{mostPopulation?.name?.official || ''}</h3>
                             <p>Most Population</p>
                         </div>

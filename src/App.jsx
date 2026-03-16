@@ -22,9 +22,7 @@ function App() {
 
   async function getCountries() {
     try {
-      const response = await axios.get(
-        'https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital'
-      )
+      const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital')
 
       setCountries(response.data)
     } catch (error) {
