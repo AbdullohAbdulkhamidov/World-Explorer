@@ -23,9 +23,10 @@ function App() {
   async function getCountries() {
     try {
       const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital')
-
       setCountries(response.data)
-    } catch (error) {
+    }
+
+    catch (error) {
       console.log(error)
     }
   }
@@ -34,14 +35,11 @@ function App() {
   const [favourite, setFavourite] = useState([])
 
   const addToFavourites = (country) => {
-
     setFavourite(prevItems => {
 
-      const exists = prevItems.find(
-        item => item?.name?.common === country?.name?.common
-      )
+      const isAvailable = prevItems.find(item => item?.name?.common === country?.name?.common)
 
-      if (exists) {
+      if (isAvailable) {
         return prevItems
       }
 
@@ -51,9 +49,8 @@ function App() {
 
   const removeFromFavourites = (country) => {
     setFavourite(prevItems =>
-      prevItems.filter(
-        item => item?.name?.common !== country?.name?.common
-      )
+
+      prevItems.filter(item => item?.name?.common !== country?.name?.common)
     )
   }
 
@@ -62,14 +59,23 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path='/' element={<Home countries={countries} />} />
+        <Route
+          path='/'
+          element={
+            <>
+              <Home countries={countries} />
+              <Footer />
+            </>
+          }
+        />
+
         <Route path='/countries' element={<Countries countries={countries} />} />
         <Route path="/name/:name" element={<CountryDetails addToFavourites={addToFavourites} favourite={favourite} />} />
         <Route path='/favourites' element={<Favourites favourite={favourite} removeFromFavourites={removeFromFavourites} />} />
         <Route path='*' element={<NotFound />} />
+
       </Routes>
 
-      <Footer />
     </BrowserRouter>
   )
 }
